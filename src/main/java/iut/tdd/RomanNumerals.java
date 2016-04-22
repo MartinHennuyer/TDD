@@ -1,7 +1,6 @@
 		package iut.tdd;
 		
 		public class RomanNumerals {
-			String [] Roman= new String []{"I","V","X","L","C","D","M"};
 			public String convertToRoman(String arabe) {
 				int arabenumber= Integer.parseInt(arabe);
 				String result="";
@@ -10,6 +9,16 @@
 						result+=convertUniteToRoman(arabenumber);
 					}else if (arabenumber<100){
 						result+=convertDizaineToRoman(arabenumber);
+						result+=convertUniteToRoman(arabenumber%10);
+					}else if (arabenumber<1000){
+						result+=convertCentaineToRoman(arabenumber);
+						result+=convertDizaineToRoman(arabenumber%100);
+						result+=convertUniteToRoman((arabenumber%100)%10);
+					}else{
+						result+=convertMillierToRoman(arabenumber);
+						result+=convertCentaineToRoman(arabenumber%1000);
+						result+=convertDizaineToRoman((arabenumber%1000)%100);
+						result+=convertUniteToRoman(((arabenumber%1000)%100)%10);
 					}
 				}
 				
@@ -85,8 +94,56 @@
 					romain ="XC";
 					break;
 				}
-				arabe-=arabei*10;
-				romain+=convertUniteToRoman(arabe);
+				return romain;
+			}
+			public String convertCentaineToRoman(int arabe) {
+				String romain="";
+				int arabei=arabe/100;
+				switch (arabei){
+					case 1: arabe=1;
+					romain ="C";
+					break;
+					case 2: arabe=2;
+					romain ="CC";
+					break;
+					case 3: arabe=3;
+					romain ="CCC";
+					break;
+					case 4: arabe=4;
+					romain ="CD";
+					break;
+					case 5: arabe=5;
+					romain ="D";
+					break;
+					case 6: arabe=6;
+					romain ="DC";
+					break;
+					case 7: arabe=7;
+					romain ="DCC";
+					break;
+					case 8: arabe=8;
+					romain ="DCCC";
+					break;
+					case 9: arabe=9;
+					romain ="CM";
+					break;
+				}
+				return romain;
+			}
+			public String convertMillierToRoman(int arabe) {
+				String romain="";
+				int arabei=arabe/1000;
+				switch (arabei){
+					case 1: arabe=1;
+					romain ="M";
+					break;
+					case 2: arabe=2;
+					romain ="MM";
+					break;
+					case 3: arabe=3;
+					romain ="MMM";
+					break;
+				}
 				return romain;
 			}
 		
