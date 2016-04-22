@@ -13,12 +13,12 @@
 					}else if (arabenumber<1000){
 						result+=convertCentaineToRoman(arabenumber);
 						result+=convertDizaineToRoman(arabenumber%100);
-						result+=convertUniteToRoman((arabenumber%100)%10);
+						result+=convertUniteToRoman(arabenumber%10);
 					}else{
 						result+=convertMillierToRoman(arabenumber);
 						result+=convertCentaineToRoman(arabenumber%1000);
-						result+=convertDizaineToRoman((arabenumber%1000)%100);
-						result+=convertUniteToRoman(((arabenumber%1000)%100)%10);
+						result+=convertDizaineToRoman(arabenumber%100);
+						result+=convertUniteToRoman(arabenumber%10);
 					}
 				}
 				

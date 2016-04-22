@@ -302,4 +302,48 @@ public class RomanNumeralsTest {
 		//Then
 		Assert.assertEquals(expected, actual);
 	}
+	@Test
+	public void should_return_MM_when_2000 () {		
+		//Given
+		String input = "2000";
+		String expected = "MM"; 
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		String actual = romanNumeral.convertToRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
+	@Test
+	public void should_return_MMCDXLVI_when_2446 () {		
+		//Given
+		String input = "2446";
+		String expected = "MMCDXLVI"; 
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		String actual = romanNumeral.convertToRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
+	@Test
+	public void should_return_MMM_when_3000 () {		
+		//Given
+		String input = "2446";
+		String expected = "MMCDXLVI"; 
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		String actual = romanNumeral.convertToRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
+	@Test
+	public void should_return_null_when_4000 () {		
+		//Given
+		String input = "4000";
+		String expected = ""; 
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		String actual = romanNumeral.convertToRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
 }
