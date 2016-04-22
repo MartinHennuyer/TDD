@@ -27,7 +27,31 @@
 			}
 		
 			public Object convertFromRoman(String roman) {
-				return "1";
+				int result=0;
+				for (int i=0 ; i<roman.length() ; i++){
+					result += valeur(roman.charAt(i));
+				}
+				return result;
+			}
+			public int valeur(char roman){
+				String v = ""+roman;
+				int arabe=0;
+				if (roman=='M'){
+					arabe = 1000;
+				}else if (roman=='D'){
+					arabe=500;
+				}else if (roman=='C'){
+					arabe=100;
+				}else if (roman=='L'){
+					arabe=50;
+				}else if (roman=='X'){
+					arabe=10;
+				}else if (roman=='V'){
+					arabe=5;
+				}else if (roman=='I'){
+					arabe=1;
+				}
+				return arabe;
 			}
 			public String convertUniteToRoman(int arabe) {
 				String romain="";

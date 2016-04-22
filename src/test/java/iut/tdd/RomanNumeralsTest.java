@@ -346,4 +346,59 @@ public class RomanNumeralsTest {
 		//Then
 		Assert.assertEquals(expected, actual);
 	}
+	@Test
+	public void should_return_1_when_I () {
+		//Given
+		String input = "I";
+		String expected = "1";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		Object actual = romanNumeral.convertFromRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
+	//@Test
+	public void should_return_2_when_II () {
+		//Given
+		String input = "II";
+		String expected = "2";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		Object actual = romanNumeral.convertFromRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
+	//@Test
+	public void should_return_3_when_III () {
+		//Given
+		String input = "III";
+		String expected = "3";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		Object actual = romanNumeral.convertFromRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
+	//@Test
+	public void should_return_4_when_IV () {
+		//Given
+		String input = "IV";
+		String expected = "4";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		Object actual = romanNumeral.convertFromRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
+	//@Test
+	public void should_return_5_when_V () {
+		//Given
+		String input = "V";
+		String expected = "5";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		//When
+		Object actual = romanNumeral.convertFromRoman(input);
+		//Then
+		Assert.assertEquals(expected, actual);
+	}
 }
