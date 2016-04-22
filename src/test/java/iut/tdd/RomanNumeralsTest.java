@@ -350,7 +350,7 @@ public class RomanNumeralsTest {
 	public void should_return_1_when_I () {
 		//Given
 		String input = "I";
-		String expected = "1";
+		int expected = 1;
 		RomanNumerals romanNumeral = new RomanNumerals();
 		//When
 		Object actual = romanNumeral.convertFromRoman(input);
@@ -361,7 +361,7 @@ public class RomanNumeralsTest {
 	public void should_return_2_when_II () {
 		//Given
 		String input = "II";
-		String expected = "2";
+		int expected = 2;
 		RomanNumerals romanNumeral = new RomanNumerals();
 		//When
 		Object actual = romanNumeral.convertFromRoman(input);
@@ -372,7 +372,7 @@ public class RomanNumeralsTest {
 	public void should_return_3_when_III () {
 		//Given
 		String input = "III";
-		String expected = "3";
+		int expected = 3;
 		RomanNumerals romanNumeral = new RomanNumerals();
 		//When
 		Object actual = romanNumeral.convertFromRoman(input);

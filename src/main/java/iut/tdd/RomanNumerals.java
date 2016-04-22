@@ -31,10 +31,10 @@
 				for (int i=0 ; i<roman.length() ; i++){
 					result += valeur(roman.charAt(i));
 				}
+				System.out.println(result);
 				return result;
 			}
 			public int valeur(char roman){
-				String v = ""+roman;
 				int arabe=0;
 				if (roman=='M'){
 					arabe = 1000;
@@ -51,6 +51,7 @@
 				}else if (roman=='I'){
 					arabe=1;
 				}
+				System.out.println(arabe);
 				return arabe;
 			}
 			public String convertUniteToRoman(int arabe) {
