@@ -357,7 +357,7 @@ public class RomanNumeralsTest {
 		//Then
 		Assert.assertEquals(expected, actual);
 	}
-	//@Test
+	@Test
 	public void should_return_2_when_II () {
 		//Given
 		String input = "II";
@@ -368,7 +368,7 @@ public class RomanNumeralsTest {
 		//Then
 		Assert.assertEquals(expected, actual);
 	}
-	//@Test
+	@Test
 	public void should_return_3_when_III () {
 		//Given
 		String input = "III";
